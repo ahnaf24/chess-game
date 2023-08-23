@@ -1,12 +1,19 @@
 #gameboard {
     width: 320px;
     height: 320px;
-    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .squre {
     height: 40px;
     width: 40px;
+}
+
+.squre svg {
+    height: 30px;
+    width: 30px;
+    margin: 5px;
 }
 
 .beige {

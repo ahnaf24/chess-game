@@ -15,10 +15,18 @@ const startPieces =  [
 ]
 
 function createBoard() {
-    startPieces.forEach((startPiece) => {
+    startPieces.forEach((startPiece, i) => {
         const squre =document.createElement('div')
         squre.classList.add('square')
-        squre.classList.add('beige')
+        squre.innerHTML = startPiece
+        squre.setAttribute('squre-id', i)
+        //squre.classList.add('beige')
+        const row = Math.floor( 63 - i / 8) + 1
+        if (row % 2 === 0) {
+            squre.classList.add(i % 2 === 0 ? "beige" : "brown") 
+        }else {
+            squre.classList.add(i % 2 === 0 ? "brown" : "beige") 
+        }
         gameBoard.append(squre)
     })
 }
