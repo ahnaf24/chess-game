@@ -27,6 +27,10 @@ function createBoard() {
         }else {
             squre.classList.add(i % 2 === 0 ? "brown" : "beige") 
         }
+
+        if (i <= 5) {
+            squre.firstChild.firstChild.classList.add('black')
+        }
         gameBoard.append(squre)
     })
 }
