@@ -56,6 +56,7 @@ function createBoard() {
  let startPositionId
  let draggedElement
 
+
  function dragstart (e) {
     startPositionId = e.target.parentNode.getAttribute('squre-id')
     draggedElement= e.target
