@@ -18,28 +18,28 @@ const startPieces =  [
 
 function createBoard() {
     startPieces.forEach((startPiece, i) => {
-        const squre =document.createElement('div')
-        squre.classList.add('square')
-        squre.innerHTML = startPiece
-        squre.firstChild?.setAttribute('draggable', true)
-        squre.setAttribute('squre-id', i)
+        const square =document.createElement('div')
+        square.classList.add('square')
+        square.innerHTML = startPiece
+        square.firstChild?.setAttribute('draggable', true)
+        square.setAttribute('square-id', i)
         //squre.classList.add('beige')
         const row = Math.floor( 63 - i / 8) + 1
         if (row % 2 === 0) {
-            squre.classList.add(i % 2 === 0 ? "beige" : "brown") 
+            square.classList.add(i % 2 === 0 ? "beige" : "brown") 
         }else {
-            squre.classList.add(i % 2 === 0 ? "brown" : "beige") 
+            square.classList.add(i % 2 === 0 ? "brown" : "beige") 
         }
 
         if (i <= 5) {
-            squre.firstChild.firstChild.classList.add('black')
+            square.firstChild.firstChild.classList.add('black')
         }
 
         if (i >= 45) {
-            squre.firstChild.firstChild.classList.add('white')
+            square.firstChild.firstChild.classList.add('white')
 
         }
-        gameBoard.append(squre)
+        gameBoard.append(square)
     })
 }
  createBoard()
